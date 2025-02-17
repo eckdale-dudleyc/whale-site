@@ -13,6 +13,10 @@
         </header>
 
         <nav>
+            <button onclick="showSection('facts')">About Blue Whales</button>
+            <button onclick="showSection('chatbot')">Ask the Chatbot</button>
+            <button onclick="showSection('quiz')">Take the Quiz</button>
+        </nav>
 
             <!--Facts and Conservation Section-->
             <section id="facts">
@@ -24,7 +28,30 @@
                     <li>Reduce plastic waste to keep oceans clean.</li>
                     <li>Advocate for marine protected areas.</li>
                 </ul>
+
+                <h3>Whale Sounds</h3>
+                <p>Blue Whales communicate with deep, powerful sounds. Click below to listen!</p>
+                <button onclick="playSound('whale1.mp3')">Whale Song 1</button>
+                <button onclick="playSound('whale2.mp3')">Whale Song 2</button>
             </section>
-        </nav>
+
+            <!--Chatbot Section-->
+            <section id="chatbot" style="display: none;">
+                <h2>Ask Me About Blue Whales!</h2>
+                <div id="chat-container">
+                    <div id="chat-box"></div>
+                    <input type="text" id="user-input" placeholder="Ask a question...">
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+            </section>
+
+            <!--Quiz Section-->
+            <section id="quiz" style="display: none;">
+                <h2>Blue Whale Conservation Quiz</h2>
+                <div id="question-container"></div>
+                <button onclick="nextQuestion()">Next question</button>
+            </section>
+
+            <script src="script.js"></script>
     </body>
 </html>
